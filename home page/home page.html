@@ -1,0 +1,521 @@
+<html>
+    <head>
+      <link rel="icon" type="image/png" href="favi.jpeg">
+        <meta name="viewport" content="width=device-width">
+        <title>Yaka Travels</title>
+        <link rel="stylesheet" href="cw.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+                body {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 0;
+                background-color: black;
+              }
+
+                .banner1,
+                .banner2,
+                .banner3,
+                .banner4 {
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  margin-top: 0%;
+                }
+
+                  /* CSS FOR PICTURE SLIDES */
+
+                  .top img {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                  .text-box {
+                    width: 600px;
+                    position: absolute;
+                    top: 200px;
+                    left: 100px;
+                    color: aliceblue;
+                  }
+                  .text-box h1 {
+                    margin-bottom: 40px;
+                  }
+                  .text-box p {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin-top: 80px;
+                  }
+
+                  .text-box span {
+                    background: red;
+                    height: 1px;
+                    width: 550px;
+                    position: absolute;
+                    left: 0;
+                  }
+                  .banner1 {
+                    animation: slide1 12s linear infinite;
+                    max-width: 100%;
+                  }
+                  .banner2 {
+                    animation: slide2 12s linear infinite;
+                    max-width: 100%;
+                  }
+                  .banner3 {
+                    animation: slide3 12s linear infinite;
+                    max-width: 100%;
+                  }
+                  .banner4 {
+                    animation: slide4 12s linear infinite;
+                    max-width: 100%;
+                  }
+                  @keyframes slide1 {
+                    0% {
+                      visibility: visible;
+                    }
+                    25% {
+                      visibility: hidden;
+                    }
+                    50% {
+                      visibility: hidden;
+                    }
+                    75% {
+                      visibility: hidden;
+                    }
+                    100% {
+                      visibility: visible;
+                    }
+                  }
+
+                  @keyframes slide2 {
+                    0% {
+                      visibility: hidden;
+                    }
+                    25% {
+                      visibility: hidden;
+                    }
+                    50% {
+                      visibility: visible;
+                    }
+                    75% {
+                      visibility: hidden;
+                    }
+                    100% {
+                      visibility: hidden;
+                    }
+                  }
+                  @keyframes slide3 {
+                    0% {
+                      visibility: hidden;
+                    }
+                    25% {
+                      visibility: hidden;
+                    }
+                    50% {
+                      visibility: hidden;
+                    }
+                    75% {
+                      visibility: visible;
+                    }
+                    100% {
+                      visibility: visible;
+                    }
+                  }
+                  @keyframes slide4 {
+                    0% {
+                      visibility: hidden;
+                    }
+                    25% {
+                      visibility: hidden;
+                    }
+                    50% {
+                      visibility: hidden;
+                    }
+                    75% {
+                      visibility: hidden;
+                    }
+                    100% {
+                      visibility: visible;
+                    }
+                  }
+
+                  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+
+                  /* CSS FOR PICTURE SLIDES */
+
+                  .top {
+                      position: relative;
+                      height: 100%;
+                      width: 100%;
+                      margin-top: -10%;
+                      background-color: #69f580ec;
+                    }
+
+
+                  .top img {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                  .text-box {
+                    width: 600px;
+                    position: absolute;
+                    top: 200px;
+                    left: 100px;
+                    color: aliceblue;
+                  }
+                  .text-box h1 {
+                    margin-bottom: 40px;
+                  }
+                  .text-box p {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin-top: 80px;
+                  }
+
+                  .text-box span {
+                    background: red;
+                    height: 1px;
+                    width: 550px;
+                    position: absolute;
+                    left: 0;
+                  }
+
+
+                  .main {
+                    margin-top: 0%;
+                    background-color: #69f580ec;
+                  }
+
+                  .flip-card {
+                    max-width: 100%;
+                    background-color: transparent;
+                    width: 300px;
+                    height: 200px;
+                    border: 1px solid #f1f1f1;
+                    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+                  }
+
+                  /* This container is needed to position the front and back side */
+                  .flip-card-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    transition: transform 0.8s;
+                    transform-style: preserve-3d;
+                  }
+
+                  /* Do an horizontal flip when you move the mouse over the flip box container */
+                  .flip-card:hover .flip-card-inner {
+                    transform: rotateY(180deg);
+                  }
+
+                  /* Position the front and back side */
+                  .flip-card-front,
+                  .flip-card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden; /* Safari */
+                    backface-visibility: hidden;
+                  }
+
+                  /* Style the front side (fallback if image is missing) */
+                  .flip-card-front {
+                    background-color: #bbb;
+                    color: black;
+                  }
+
+                  /* Style the back side */
+                  .flip-card-back {
+                    background-color: dodgerblue;
+                    color: white;
+                    transform: rotateY(180deg);
+                  }
+
+                  .secondpanel {
+                    margin-left: 39%;
+                    margin-top: -26%;
+                  }
+
+                  .thirdpanel {
+                    margin-top: -26%;
+                    margin-left: 78%;
+                  }
+
+                  .glow {
+                    font-size: 60px;
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                    animation: glow 1s ease-in-out infinite alternate;
+                  }
+
+                  @-webkit-keyframes glow {
+                    from {
+                      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #002ae6,
+                        0 0 40px #f2ff40, 0 0 50px #f2ff40, 0 0 60px #f2ff40, 0 0 70px #f2ff40;
+                    }
+
+                    to {
+                      text-shadow: 0 0 20px #fff, 0 0 30px #493cf5, 0 0 40px #493cf5,
+                        0 0 50px #493cf5, 0 0 60px #493cf5, 0 0 70px #493cf5, 0 0 80px #493cf5;
+                    }
+                  }
+                  #loader {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    z-index: 1;
+                    width: 120px;
+                    height: 120px;
+                    margin: -76px 0 0 -76px;
+                    border: 16px solid #f70101;
+                    border-radius: 50%;
+                    border-top: 16px solid #130080;
+                    border-right: 16px solid rgb(255, 255, 255);
+                    border-bottom: 16px solid red;
+                    border-left: 16px solid rgb(255, 255, 255);
+                    -webkit-animation: spin 4s linear infinite;
+                    animation: spin 4s linear infinite;
+                  }
+
+                  @-webkit-keyframes spin {
+                    0% {
+                      -webkit-transform: rotate(0deg);
+                    }
+                    100% {
+                      -webkit-transform: rotate(360deg);
+                    }
+                  }
+
+                  @keyframes spin {
+                    0% {
+                      transform: rotate(0deg);
+                    }
+                    100% {
+                      transform: rotate(360deg);
+                    }
+                  }
+
+                  /* Add animation to "page content" */
+                  .animate-bottom {
+                    position: relative;
+                    -webkit-animation-name: animatebottom;
+                    -webkit-animation-duration: 1s;
+                    animation-name: animatebottom;
+                    animation-duration: 1s;
+                  }
+
+                  @-webkit-keyframes animatebottom {
+                    from {
+                      bottom: -100px;
+                      opacity: 0;
+                    }
+                    to {
+                      bottom: 0px;
+                      opacity: 1;
+                    }
+                  }
+
+                  @keyframes animatebottom {
+                    from {
+                      bottom: -100px;
+                      opacity: 0;
+                    }
+                    to {
+                      bottom: 0;
+                      opacity: 1;
+                    }
+                  }
+
+                  #myDiv {
+                    display: none;
+                    text-align: center;
+                  }
+
+
+        </style>
+    </head>
+    <body onload="myFunction()" style="margin:0;">
+
+      <div id="loader"></div>
+
+      <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="topnav">
+          <img src="favi.jpeg" alt="img" style="max-width: 50px; max-height: 50px; float: left;"></img>
+          <a href="home page.html">Home</a>
+          <a href="CW.html" >Buy Products</a>
+          <a href="Quiz.html" >Quiz</a>
+          <a href="query.html" >Queries</a>
+          <a href="../thumbnail page/thumbnailFinal.html" >Thumbnail Images</a>
+          <a href="Explore.html" >Explore</a>
+          <a href="../site map/Sitemap Demo.html" >Site Map</a>
+          <a href="../Student_details/Student_details.html">Our team</a>
+        </div>
+    <div class="top">
+        <div class="banner1">
+            <img src="slide 1.jpg" >
+            <div class="text-box">
+                
+                <h1>Nine Arch Bridge</h1>
+                <span></span>
+                <p>The Nine Arch Bridge, also known as the ‘Bridge in the Sky’ was constructed by connecting two bog mountains when constructing the Badulla – Colombo railway. This bridge is 300 feet in length, 25 feet in width and 80-100 feet in height. It is one of the best examples of colonial-era railway construction in the country.</p>
+            </div>
+        </div>
+            <div class="banner2">
+                <img src="slide 2.jpg" >
+                <div class="text-box">
+                    
+                    <h1>Ella rock</h1>
+                    <span></span>
+                    <p>Ella Rock is a popular mountain for hiking and is situated on Wellawaya-Ella-Kumbalwela Highway 
+                      in Ella. Hiking the Ella Rock offers stunning views from the peak of the mountain and is also the ideal 
+                      place to watch the sunrise in Ella.</p>
+                </div>
+           </div>
+            <div class="banner3">
+                <img src="slide 3.jpg" >
+                <div class="text-box">
+                    
+                    <h1>Temple of the Tooth</h1>
+                    <span></span>
+                    <p>The Temple of the Tooth Sri Lanka popularly known as the “Sri Dalada Maligawa” 
+                      is one of the most picturesque and iconic Buddhist temples in the country and is a prominent itinerary 
+                      item in the list of Kandy things to do.</p>
+                </div>
+           </div>
+            <div class="banner4">
+                <img src="slide 4.webp" >
+                <div class="text-box">
+                    
+                    <h1>Sigiriya</h1>
+                    <span></span>
+                    <p>Sigiriya, also called Lion Rock or Lion Mountain, site in central Sri Lanka consisting of the ruins of an ancient 
+                      stronghold that was built in the late 5th century CE on a remarkable monolithic rock pillar.</p>
+                </div>
+            </div>
+
+    </div>
+
+            <div class="main">
+                <div class="firstpanel">
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="airplane.jpg" alt="Avatar" style="width:300px;height:200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>FLIGHT INFORMATION</h1>
+                        <p>Sri Lanka Tourism together with the Sri Lankan Airlines and </p>
+                        <p>Mihin Lanka provides the online booking of flights</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="visa.jpg" alt="Avatar" style="width:300px;height:200px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>VISA APPLY</h1>
+                        <p>We provide online visa </p>
+                        <p>applications.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="secondpanel">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="tuk tuk.jpg" alt="Avatar" style="width:300px;height:200px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>TOUR DRIVER</h1>
+                            <p>We provide authorizes taxi</p>
+                            <p> driver details</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="tourguide.jpg" alt="Avatar" style="width:300px;height:200px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>TRAVEL AGENTS</h1>
+                            <p>We provide registered</p>
+                            <p>travel agents in sri lanka.</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                  <div class="thirdpanel">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="travel agents.jpeg" alt="Avatar" style="width:300px;height:200px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>TOUR GUIDERS</h1>
+                            <p>We provide registered</p>
+                            <p>tour guides in sri lanka.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="accomdt.jpg" alt="Avatar" style="width:300px;height:200px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>ACCOMADATIONS</h1>
+                            <p>We provide registered</p>
+                            <p>accomadations in sri lanka</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <h1 class="glow">Explores Sri Lanka's Beauty</h1>    
+
+                  <footer class="footer-distributed">
+                    <div class="footer-left">
+                      <p class="footer-links">
+                          <a class="link-1" href="home page.html">Home</a>
+                          <a href="#">Blog</a>
+                          <a href="../Buy products/buy products.html">Pricing</a>
+                          <a href="#">Contact</a>
+                          <a style="float: right;" href="pasinduinfo.html">Developer Page</a>
+                        </p>
+
+                        <p>Sri Lanka tourism &copy; 2022</p>
+                      </div>
+                  </footer>
+
+              </div>
+                  
+              <script>
+                var myVar;
+                
+                function myFunction() {
+                  myVar = setTimeout(showPage, 3000);
+                }
+                
+                function showPage() {
+                  document.getElementById("loader").style.display = "none";
+                  document.getElementById("myDiv").style.display = "block";
+                }
+                </script>
+        
+        </body>
+</html>

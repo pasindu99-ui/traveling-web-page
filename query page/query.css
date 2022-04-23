@@ -1,0 +1,34 @@
+.queryBody {
+  background-color: floralwhite;
+  background-image: url("./queryback.jpg");
+  background-size: 1700px;
+  width: 100%;
+  height: 80%;
+  opacity: 10;
+}
+
+.field1 {
+  font-size: 12px;
+  padding: 30px;
+  width: 1000px;
+  line-height: 1.8;
+  font-size: 25px;
+  background-color: rgb(72, 90, 74);
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+  margin-top: 10%;
+  margin-left: 250px;
+}
+#suBtn {
+  width: 15em;
+  height: 2em;
+  background: #fff;
+}
+
+#line {
+  background: rgb(255, 255, 255);
+  height: 3px;
+  width: 100px;
+  position: absolute;
+  margin-left: 10px;
+}

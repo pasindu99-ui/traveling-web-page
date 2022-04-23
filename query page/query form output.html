@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>query form output</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="query.css">
+        <link rel="stylesheet" href="cw.css">
+        </head>
+        <body class="queryBody">
+            <div class="topnav">
+              <img src="favi.jpeg" alt="img" style="max-width: 50px; max-height: 50px; float: left;"></img>
+                <a href="home page.html">Home</a>
+                <a href="../buy products/CW.html" >Buy Products</a>
+                <a href="../quiz page/Quiz.html" >Quiz</a>
+                <a href="query.html" >Queries</a>
+                <a href="../thumbnail page/thumbnailFinal.html" >Thumbnail Images</a>
+                <a href="Explore.html" >Explore</a>
+                <a href="../site map/Sitemap Demo.html" >Site Map</a>
+                <a href="../Student_details/Student_details.html">Our team</a>
+            </div>
+        <div class="mail">
+        <form name="myForm" action="#">
+           <fieldset class="field1">
+            <h2>Are you sure this informations are correct?</h2>  
+            <span id="fname"><h4></h4></span> 
+            <br>
+            <span id="subjectp"></span>
+            <br>
+            <span id="emails"></span>
+            <br>
+            <span id="details"></span>
+            <br>
+            <input type=button id="suBtn" onClick="backrefresh()" value='Send'>
+            <input type="button" id="suBtn" value="Edit" onclick="history.back()">
+        </form>
+        </div>
+        <script>
+            document.getElementById("fname").innerHTML=localStorage.getItem("fsname");
+            document.getElementById("emails").innerHTML=localStorage.getItem("maildetails");
+            document.getElementById("subjectp").innerHTML=localStorage.getItem("subjectsout");
+            document.getElementById("details").innerHTML=localStorage.getItem("detailsout");
+    
+            function backrefresh(){
+                parent.location='query.html'
+                alert("Submitted")
+    }
+        </script>
+          <footer class="footer-distributed">
+            <div class="footer-left">
+              <p class="footer-links">
+                  <a class="link-1" href="home page.html">Home</a>
+                  <a href="#">Blog</a>
+                  <a href="../Buy products/buy products.html">Pricing</a>
+                  <a href="#">Contact</a>
+                  <a style="float: right;" href="pasinduinfo.html">Developer Page</a>
+                </p>
+
+                <p>Sri Lanka tourism &copy; 2022</p>
+              </div>
+          </footer>
+        </body>
+</html>
